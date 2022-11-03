@@ -1,0 +1,131 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="{% static 'favicon.png' %}">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}">
+	<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+	<link rel="stylesheet" href="{% static 'css/glightbox.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<title>Archiark</title>
+</head>
+<body>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="{% url 'website:index' %}" class="logo m-0 float-start">Archiark<span class="text-primary">.</span> </a>
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
+					<li><a href="{% url 'website:index' %}">Home</a></li>
+                    <li><a href="{% url 'website:project' %}">Projects</a></li>
+					<li><a href="{% url 'website:service' %}">Services</a></li>
+					<li><a href="{% url 'website:about' %}">About</a></li>
+					<li><a href="{% url 'website:contact' %}">Contact Us</a></li>
+				</ul>
+                <a href="{% url 'website:index' %}" class="burger ml-auto float-end site-menu-toggle light js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+				<ul class="site-menu float-end d-none d-md-block">
+					<li><a href="tel:021-11228-777" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>+o21 11228 777</span></a></li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+	<div class="site-footer bg-light">
+		<div class="container">
+
+			<div class="row justify-content-between">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3 class="line-top">About</h3>
+						<p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p>
+
+					</div>
+					<div class="widget">
+						<h3 class="line-top">Connect with us</h3>
+						<ul class="social list-unstyled mb-5">
+							<li><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+							<li><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://www.linkedin.com/"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-12">
+							<div class="widget">
+								<h3 class="line-top">Navigations</h3>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-4">
+							<div class="widget">
+								<ul class="links list-unstyled">
+									<li><a href="{% url 'website:index' %}">Home</a></li>
+									<li><a href="{% url 'website:service' %}">Services</a></li>
+									<li><a href="{% url 'website:project' %}">Projects</a></li>
+									<li><a href="{% url 'website:contact' %}">Contact Us</a></li>
+									<li><a href="{% url 'website:about' %}">About Us</a></li>
+								</ul>
+							</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center text-center copyright">
+				<div class="col-md-8">
+					<p class="small text-black-50">Developed by <a href="https://amirhamidi.herokuapp.com">Amir Hamidi</a></br>Designed By <a href="https://themewagon.com/">Themewagon</a> <!-- License information: https://untree.co/license/ -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Preloader -->
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'js/tiny-slider.js' %}"></script>
+	<script src="{% static 'js/aos.js' %}"></script>
+	<script src="{% static 'js/glightbox.min.js' %}"></script>
+	<script src="{% static 'js/navbar.js' %}"></script>
+	<script src="{% static 'js/counter.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
